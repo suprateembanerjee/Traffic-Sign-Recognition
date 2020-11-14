@@ -17,14 +17,11 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/graph.png "Visualization"
-[image2]: ./examples/normalized.png "Normalized Image"
+[image1]: ./examples/graph.PNG "Visualization"
+[image2]: ./examples/normalized.PNG "Normalized Image"
 [image3]: ./examples/signs_test.png "German Traffic Signs"
-[image4]: ./examples/signs_test_resized.png "Resized German Signs"
-[image5]: ./examples/preprocessed.png "Preprocessed Signs"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image4]: ./examples/signs_test_resized.PNG "Resized German Signs"
+[image5]: ./examples/preprocessed.PNG "Preprocessed Signs"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
