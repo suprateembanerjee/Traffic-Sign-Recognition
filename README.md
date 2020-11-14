@@ -63,6 +63,7 @@ I have skipped Grayscaling for this project altogether. This is because I felt t
 As a last step, I normalized the image data because it helped the image present itself in a clearer manner to the algorithm. The image became much 'flatter' and the pixels had a range from 0 to 1.
 
 An example of my normalized images:
+
 ![alt text][image2]
 
 I decided against augmenting the data because of two primary reasons. First, I had enough data to train a satisfactory model, and second, rotational augmentation could have harmed the model more than serving it: the dataset contains arrows, which are direction-specific to their labels. Having augmented data could have induced additional noise. The use of CNN's induced translation invariance by logic. Thus, I felt data augmentation would not be necessary.
