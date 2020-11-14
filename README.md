@@ -201,8 +201,8 @@ For the fifth image, the model is extremely sure that this is a keep right sign 
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 0.99        			| Keep right  									| 
-| 0.01     				| Roundabout mandatory										|
+| 1.0        			| Keep right  									| 
+| 0.0     				| Roundabout mandatory										|
 | 0.0					| Turn left ahead										|
 | 0.0	      			| 	120km/h				 				|
 | 0.0				    | Go sraight or right      							|
