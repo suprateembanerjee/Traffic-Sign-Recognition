@@ -21,7 +21,7 @@ The goals / steps of this project are the following:
 [image2]: ./examples/normalized.PNG "Normalized Image"
 [image3]: ./examples/signs_test.png "German Traffic Signs"
 [image4]: ./examples/signs_test_resized.PNG "Resized German Signs"
-[image5]: ./examples/preprocessed.PNG "Preprocessed Signs"
+#[image5]: ./examples/preprocessed.PNG "Preprocessed Signs"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -161,31 +161,31 @@ For the first image, the model is extremely sure that this is a 30km/h sign (pro
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 1.0         			| 30km/h  									| 
-| 0.0     				| 20km/h 										|
+| 0.0     				| 80km/h 										|
 | 0.0					| 50km/h											|
-| 0.0	      			| 80km/h					 				|
-| 0.0				    | 70km/h      							|
+| 0.0	      			| 70km/h					 				|
+| 0.0				    | 20km/h      							|
 
 
-For the second image, the model is extremely sure that this is a 30km/h sign (probability of 0.99), and the image does contain a 50km/h sign. The top five soft max probabilities were
+For the second image, the model is extremely sure that this is a 50km/h sign (probability of 0.97), and the image does contain a 50km/h sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 0.99         			| 30km/h  									| 
-| 0.1     				| 50km/h 										|
-| 0.0					| Keep right											|
-| 0.0	      			| 80km/h					 				|
-| 0.0				    | Turn right ahead      							|
+| 0.97         			| 50km/h  									| 
+| 0.3     				| 30km/h 										|
+| 0.0					| Roundabout mandatory											|
+| 0.0	      			| Keep right				 				|
+| 0.0				    | Go straight or Right      							|
 
 For the third image, the model is extremely sure that this is a no entry sign (probability of 1), and the image does contain a no entry sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 1.0         			| No entry  									| 
-| 0.0     				| 20km/h 										|
-| 0.0					| bicycle crossing											|
-| 0.0	      			| Bumpy road					 				|
-| 0.0				    | 30km/h      							|
+| 0.0     				| stop 										|
+| 0.0					| 20km/h											|
+| 0.0	      			| 30km/h					 				|
+| 0.0				    | Traffic Signals      							|
 
 For the fourth image, the model is extremely sure that this is a stop sign (probability of 1), and the image does contain a stop sign. The top five soft max probabilities were
 
@@ -193,20 +193,20 @@ For the fourth image, the model is extremely sure that this is a stop sign (prob
 |:---------------------:|:---------------------------------------------:| 
 | 1.0         			| Stop  									| 
 | 0.0     				| No entry 										|
-| 0.0					| 60km/h											|
-| 0.0	      			| Road work				 				|
-| 0.0				    | 80km/h      							|
+| 0.0					| 80km/h											|
+| 0.0	      			| 30km/h				 				|
+| 0.0				    | Road work      							|
 
 For the fifth image, the model is extremely sure that this is a keep right sign (probability of 0.99), and the image does contain a keep right sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 0.99        			| Keep right  									| 
-| 0.01     				| 50km/h 										|
-| 0.0					| Roundabout mandatory											|
-| 0.0	      			| Turn left ahead					 				|
-| 0.0				    | Yield      							|
+| 0.01     				| Roundabout mandatory										|
+| 0.0					| Turn left ahead										|
+| 0.0	      			| 	120km/h				 				|
+| 0.0				    | Go sraight or right      							|
 
 ### Observations
 
-I found one aspect of the model particularly troubling. The model is overconfident. It's prediction confidence is extremely high, often assigning absolute 100% confidence to the chosen label and 0% to everything else, no matter the correctness of the prediction. This is problematic because the model does not seem to give enough consideration to other possibilities. This is visible not only in the wrongly predicted image (in the 5 test images), but also in the first two images, where they are speed limit signs which look similar in appearance. One would expect the model to not be so confident in at least those cases, but it is, and has assigned absolute probability of 1, even when it has wrongly classified. I hope to keep working on this issue, trying to make the model less confident of its prediction.
+I found one aspect of the model particularly troubling. The model is overconfident. It's prediction confidence is extremely high, often assigning absolute 100% confidence to the chosen label and 0% to everything else, no matter the correctness of the prediction. This is problematic because the model does not seem to give enough consideration to other possibilities. This is visible not only in the wrongly predicted images (among the 5 test images), but also in the first two images, where they are speed limit signs which look similar in appearance. One would expect the model to not be so confident in at least those cases, but it is, and has assigned absolute probability of 1, even when it has wrongly classified. I hope to keep working on this issue, trying to make the model less confident of its prediction.
