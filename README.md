@@ -23,6 +23,8 @@ The goals / steps of this project are the following:
 [image4]: ./examples/signs_test_resized.PNG "Resized German Signs"
 [image5]: ./examples/preprocessed.PNG "Preprocessed Signs"
 
+Note: Pickled Dataset was downloaded from https://s3-us-west-1.amazonaws.com/udacity-selfdrivingcar/traffic-signs-data.zip
+
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
