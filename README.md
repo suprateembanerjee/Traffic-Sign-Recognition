@@ -21,7 +21,7 @@ The goals / steps of this project are the following:
 [image2]: ./examples/normalized.PNG "Normalized Image"
 [image3]: ./examples/signs_test.png "German Traffic Signs"
 [image4]: ./examples/signs_test_resized.PNG "Resized German Signs"
-#[image5]: ./examples/preprocessed.PNG "Preprocessed Signs"
+[image5]: ./examples/preprocessed.PNG "Preprocessed Signs"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
