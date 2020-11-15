@@ -86,7 +86,6 @@ My final model consisted of the following layers:
 | Convolution 5x5     	| 1x1 Stride, Valid Padding, outputs 28x28x6 	|
 | RELU					|												|
 | Max pooling	      	| 2x2 Stride, Valid Padding, outputs 14x14x6 				|
-| Input         		| 32x32x3 RGB image   							| 
 | Convolution 5x5     	| 1x1 Stride, Valid Padding, outputs 10x10x16 	|
 | RELU					|												|
 | Max pooling	      	| 2x2 Stride, Valid Padding, outputs 5x5x16 				|
@@ -146,13 +145,13 @@ Here are the results of the prediction:
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 30km/h      		| 30km/h   									| 
-| 50km/h     			| 30km/h 										|
+| 50km/h     			| 50km/h 										|
 | No entry					| No entry											|
 | Stop	      		| Stop					 				|
 | Keep right			| Keep right      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of 0.952.
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 0.952.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
@@ -211,4 +210,4 @@ For the fifth image, the model is extremely sure that this is a keep right sign 
 
 ### Observations
 
-I found one aspect of the model particularly troubling. The model is overconfident. It's prediction confidence is extremely high, often assigning absolute 100% confidence to the chosen label and 0% to everything else, no matter the correctness of the prediction. This is problematic because the model does not seem to give enough consideration to other possibilities. This is visible not only in the wrongly predicted images (among the 5 test images), but also in the first two images, where they are speed limit signs which look similar in appearance. One would expect the model to not be so confident in at least those cases, but it is, and has assigned absolute probability of 1, even when it has wrongly classified. I hope to keep working on this issue, trying to make the model less confident of its prediction.
+I found one aspect of the model particularly troubling. The model is overconfident. It's prediction confidence is extremely high, often assigning absolute 100% confidence to the chosen label and 0% to everything else, no matter the correctness of the prediction. This is problematic because the model does not seem to give enough consideration to other possibilities. This is visible also in the first two images, where they are speed limit signs which look similar in appearance. One would expect the model to not be so confident in at least those cases, but it is, and has assigned absolute probability of 1. I will keep working on this issue, trying to make the model less confident of its prediction.
